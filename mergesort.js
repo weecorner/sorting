@@ -50,11 +50,13 @@ function merge(arr1, arr2) {
 //Test case: [1,8,4,5,6]
 function mergeSort(arr) {
 	//var result = [];
+	if (arr.length < 2)
+        return arr;
 	var splitArr = split(arr);
 	var left = splitArr[0];
 	var right = splitArr[1];
 
-	return merge(mergeSort(left), mergeSort(left));
+	return merge(mergeSort(left), mergeSort(right));
 
 	// if (splitArr[0].length !== 1) {
 	// 	splitArr = split(splitArr[0]);
